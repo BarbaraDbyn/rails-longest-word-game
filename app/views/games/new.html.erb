@@ -1,0 +1,22 @@
+<div class="d-flex">
+  <div class="letter"><%= @letters[0] %></div>
+  <div class="letter"><%= @letters[1] %></div>
+  <div class="letter"><%= @letters[2] %></div>
+  <div class="letter"><%= @letters[3] %></div>
+  <div class="letter"><%= @letters[4] %></div>
+  <div class="letter"><%= @letters[5] %></div>
+  <div class="letter"><%= @letters[6] %></div>
+  <div class="letter"><%= @letters[7] %></div>
+  <div class="letter"><%= @letters[8] %></div>
+  <div class="letter"><%= @letters[9] %></div>
+</div>
+<br>
+<br>
+<h2>What is the longest word you can find ?</h2>
+<form action="/score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="word">
+  <input name="random_letter" type="hidden" value="<%= @letters %>">
+  <input type="submit" value="Play">
+</form>
+<% console %>
